@@ -38,19 +38,20 @@ add_executable(stand_go2 src/stand_go2.cpp src/motor_crc.cpp)
 ament_target_dependencies(stand_go2 ${DEPENDENCY_LIST})
 
 
-install(TARGETS 
-        stand_go2
-        ${PROJECT_NAME})
+# Instalar binario en "lib/stand_go2/"
+install(
+  TARGETS stand_go2
+  DESTINATION lib/${PROJECT_NAME}
+)
 
+# Asegurar que "package.xml" se copie a "share/stand_go2/package.xml"
+install(
+  FILES package.xml
+  DESTINATION share/${PROJECT_NAME}
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
-  # the following line skips the linter which checks for copyrights
-  # uncomment the line when a copyright and license is not present in all source files
-  #set(ament_cmake_copyright_FOUND TRUE)
-  # the following line skips cpplint (only works in a git repo)
-  # uncomment the line when this package is not in a git repo
-  #set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
 
