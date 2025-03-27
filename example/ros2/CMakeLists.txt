@@ -37,7 +37,6 @@ add_executable(stand_go2 src/stand_go2.cpp src/motor_crc.cpp)
 
 ament_target_dependencies(stand_go2 ${DEPENDENCY_LIST})
 
-
 # Instalar binario en "lib/stand_go2/"
 install(
   TARGETS stand_go2
