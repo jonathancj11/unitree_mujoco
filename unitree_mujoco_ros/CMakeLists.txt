@@ -43,3 +43,4 @@ message(STATUS "DEBUG: Archivo 'package.xml' instalado en share/${PROJECT_NAME}"
 # --- Finalización del paquete ament ---
 ament_package()
 message(STATUS "DEBUG: ament_package() completado para ${PROJECT_NAME}")
+
