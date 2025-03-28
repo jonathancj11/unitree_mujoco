@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>unitree_mujoco</name>
+  <version>0.1.0</version>
+  <description>Wrapper ROS 2 package for launching Unitree MuJoCo B2 simulation</description>
+  <maintainer email="tucorreo@ejemplo.com">TuNombre</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Build tool depend -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Exec depends, si necesitas:
+       <exec_depend>rclcpp</exec_depend>
+  -->
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
